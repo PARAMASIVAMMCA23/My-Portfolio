@@ -51,10 +51,22 @@
   on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
+    this.classList.tog})('bi-x')
   })
 
-  /**
+  // JavaScript code for mobile view menu bar
+
+// Get the mobile menu button and the menu itself
+const mobileMenuButton = document.querySelector('.mobile-nav-toggle');
+const mobileMenu = document.querySelector('.navbar-mobile ul');
+
+// Add a click event listener to the mobile menu button
+mobileMenuButton.addEventListener('click', () => {
+  // Toggle the 'active' class on the mobile menu to show/hide it
+  mobileMenu.classList.toggle('active');
+});
+
+/**
    * Scrool with ofset on links with a class name .scrollto
    */
   on('click', '#navbar .nav-link', function(e) {
