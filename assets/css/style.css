@@ -1048,14 +1048,17 @@ section .container {
 # carousal
 --------------------------------------------------------------*/
 .carousel-container {
+.carousel-container {
   width: 100%;
   overflow: hidden;
-  display: block;
+  display: flex;
+  flex-direction: column; /* Change to stack slides vertically */
 }
 
 .carousel-slide {
-  display:flex;
-  animation: slide 10 s infinite;
+  display: flex;
+  animation: slide 10s infinite;
+  width: 100%; /* Set a width for each slide */
 }
 
 .carousel-text {
@@ -1064,22 +1067,22 @@ section .container {
   padding: 20px;
   margin: 0 10px;
   border-radius: 5px;
-  font-size:30px
-  
+  font-size: 30px;
 }
-.carousel-slide :hover{
+
+.carousel-slide:hover {
   background-color: #ed3c0d;
 }
 
 @keyframes slide {
   0%, 100% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   33.33% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   66.66% {
-      transform: translateX(-200%);
+    transform: translateX(-200%);
   }
 }
 
