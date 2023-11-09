@@ -1072,7 +1072,7 @@ section .container {
 }
 
 @keyframes slide {
-  0% {
+  0%, 100% {
       transform: translateX(0);
   }
   33.33% {
@@ -1081,10 +1081,8 @@ section .container {
   66.66% {
       transform: translateX(-200%);
   }
-  100% {
-      transform: translateX(0);
-  }
 }
+
 /* ifram youtube video */
 iframe{
 
